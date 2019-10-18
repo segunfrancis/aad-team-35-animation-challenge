@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">aad-team-35-animation-challenge</string>
+
+    <string name="full_name">Full Name</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="or">OR</string>
+    <string name="error_empty_field">Empty field(s) not allowed</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="password_mismatched">Passwords mismatched</string>
+    <string name="error_address_taken">This email address is already taken</string>
+    <string name="registered_address">registered_email_address</string>
+    <string name="registered_name">registered_name</string>
+    <string name="registered_password">registered_password</string>
+    <string name="empty_string"></string>
+    <string name="invalid_credentials">Invalid credentials</string>
 </resources>
