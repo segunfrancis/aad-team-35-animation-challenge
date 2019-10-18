@@ -43,38 +43,38 @@ class SignUpFragment : Fragment(), OnSignUpListener {
                 && email.isNotEmpty()
                 && password.isNotEmpty()
                 && cPassword.isNotEmpty()) {
+            val authActivity = (activity as AuthActivity)
+            if (authActivity.isEmailValid(email)) {
+                if (password == cPassword) {
+                    authActivity.onAuth(VISIBLE)
 
-            if (password == cPassword) {
-                val authActivity = (activity as AuthActivity)
-                authActivity.onAuth(VISIBLE)
+                    Handler().postDelayed({
+                        val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+                        val regEmail = preferences.getString(getString(R.string.registered_address),
+                                getString(R.string.empty_string))
+                        if (email != regEmail) {
 
-                Handler().postDelayed({
-                    val preferences = PreferenceManager.getDefaultSharedPreferences(context)
-                    val regEmail = preferences.getString(getString(R.string.registered_address),
-                            getString(R.string.empty_string))
-                    if (email != regEmail) {
+                            val editor = preferences.edit()
+                            editor.putString(getString(R.string.registered_address), email)
+                            editor.putString(getString(R.string.registered_name), name)
+                            editor.putString(getString(R.string.registered_password), password)
+                            editor.apply()
 
-                        val editor = preferences.edit()
-                        editor.putString(getString(R.string.registered_address), email)
-                        editor.putString(getString(R.string.registered_name), name)
-                        editor.putString(getString(R.string.registered_password), password)
-                        editor.apply()
-
-                        authActivity.onSuccess()
-                    } else {
-                        authActivity.onFailure()
-                        showMessage(mBinding.edtEmail, getString(R.string.error_address_taken))
-                    }
-                }, 750L)
+                            authActivity.onSuccess()
+                        } else {
+                            authActivity.onFailure()
+                            showMessage(mBinding.edtEmail, getString(R.string.error_address_taken))
+                        }
+                    }, 750L)
+                } else
+                    showMessage(mBinding.edtPassword, getString(R.string.password_mismatched))
             } else
-                showMessage(mBinding.edtPassword, getString(R.string.password_mismatched))
+                showMessage(mBinding.edtEmail, getString(R.string.error_invalid_address))
         } else
             showMessage(mBinding.edtEmail, getString(R.string.error_empty_field))
     }
 
     companion object {
-
-        private val TAG = "SignUpFragment"
 
         /**
          * Use this factory method to create a new instance of

@@ -94,6 +94,10 @@ class AuthActivity : AppCompatActivity(), OnAuthListener {
         mBinding!!.button.startAnimation()
     }
 
+    fun isEmailValid(email: String): Boolean {
+        return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+    }
+
     override fun onAuth(visibility: Int) {
         mBinding!!.progress.visibility = visibility
     }

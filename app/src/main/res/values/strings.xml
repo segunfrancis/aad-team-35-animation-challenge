@@ -18,4 +18,5 @@
     <string name="registered_password">registered_password</string>
     <string name="empty_string"></string>
     <string name="invalid_credentials">Invalid credentials</string>
+    <string name="error_invalid_address">Invalid email address</string>
 </resources>

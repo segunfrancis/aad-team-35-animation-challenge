@@ -43,21 +43,24 @@ class SignInFragment : Fragment(), OnSignInListener {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             val authActivity = activity as AuthActivity
 
-            authActivity.onAuth(VISIBLE)
-            Handler().postDelayed({
-                val preferences = PreferenceManager.getDefaultSharedPreferences(context)
-                val regEmail = preferences.getString(getString(R.string.registered_address),
-                        getString(R.string.empty_string))
-                val regPassword = preferences.getString(getString(R.string.registered_password),
-                        getString(R.string.empty_string))
+            if (authActivity.isEmailValid(email)) {
+                authActivity.onAuth(VISIBLE)
+                Handler().postDelayed({
+                    val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+                    val regEmail = preferences.getString(getString(R.string.registered_address),
+                            getString(R.string.empty_string))
+                    val regPassword = preferences.getString(getString(R.string.registered_password),
+                            getString(R.string.empty_string))
 
-                if (email == regEmail && password == regPassword) {
-                    authActivity.onSuccess()
-                } else {
-                    authActivity.onFailure()
-                    showMessage(mBinding.edtEmail, getString(R.string.invalid_credentials))
-                }
-            }, 750L)
+                    if (email == regEmail && password == regPassword) {
+                        authActivity.onSuccess()
+                    } else {
+                        authActivity.onFailure()
+                        showMessage(mBinding.edtEmail, getString(R.string.invalid_credentials))
+                    }
+                }, 750L)
+            } else
+                showMessage(mBinding.edtEmail, getString(R.string.error_invalid_address))
         } else
             showMessage(mBinding.edtEmail, getString(R.string.error_empty_field))
 
