@@ -53,6 +53,9 @@ class SignInFragment : Fragment(), OnSignInListener {
                             getString(R.string.empty_string))
 
                     if (email == regEmail && password == regPassword) {
+                        val editor = preferences.edit()
+                        editor.putBoolean(getString(R.string.user_logged_in), true)
+                        editor.apply()
                         authActivity.onSuccess()
                     } else {
                         authActivity.onFailure()
