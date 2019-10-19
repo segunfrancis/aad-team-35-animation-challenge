@@ -58,6 +58,7 @@ class SignUpFragment : Fragment(), OnSignUpListener {
                             editor.putString(getString(R.string.registered_address), email)
                             editor.putString(getString(R.string.registered_name), name)
                             editor.putString(getString(R.string.registered_password), password)
+                            editor.putBoolean(getString(R.string.user_logged_in), true)
                             editor.apply()
 
                             authActivity.onSuccess()
