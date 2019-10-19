@@ -11,17 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ActivityHavingLogoutMenu"></activity>
+        <activity android:name=".onboarding.OnBoardingActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".ActivityHavingLogoutMenu" />
+
         <activity
-            android:name=".auth.MainActivity"
-            android:label="@string/title_activity_main"
+            android:name=".auth.AuthActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-       
-      <activity
-          android:name=".auth.AuthActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
-      
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
