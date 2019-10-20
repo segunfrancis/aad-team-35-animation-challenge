@@ -21,12 +21,12 @@ class HomeActivity : AppCompatActivity() {
 
         mBinding!!.takeQuiz.setOnClickListener {
             interpolate(mBinding!!.takeQuiz)
-            startActivity(Intent(this@HomeActivity, SplashScreenActivity::class.java))
+            //startActivity(Intent(this@HomeActivity, TakeQuizActivity::class.java))
         }
 
-        mBinding!!.viewCourse.setOnClickListener {
-            interpolate(mBinding!!.viewCourse)
-            //startActivity(Intent(this@HomeActivity, SplashScreenActivity::class.java))
+        mBinding!!.viewScores.setOnClickListener {
+            interpolate(mBinding!!.viewScores)
+            //startActivity(Intent(this@HomeActivity, ViewScoresActivity::class.java))
         }
     }
 
