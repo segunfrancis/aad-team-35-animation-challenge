@@ -1,26 +1,24 @@
 package com.example.aad_team_35_animation_challenge.auth
 
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
-
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.content.Intent
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.View
 import android.view.View.*
-
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
+import androidx.databinding.DataBindingUtil
+import com.example.aad_team_35_animation_challenge.HomeActivity
 import com.example.aad_team_35_animation_challenge.R
-import com.example.aad_team_35_animation_challenge.SplashScreenActivity
-import com.example.aad_team_35_animation_challenge.auth.fragments.SignInFragment
-import com.example.aad_team_35_animation_challenge.auth.fragments.SignUpFragment
-import com.example.aad_team_35_animation_challenge.auth.listeners.OnButtonSwitchedListener
-import com.example.aad_team_35_animation_challenge.databinding.ActivityAuthBinding
-
 import com.example.aad_team_35_animation_challenge.auth.customs.FlexibleLayout.Companion.ORDER_SIGN_IN_STATE
 import com.example.aad_team_35_animation_challenge.auth.customs.FlexibleLayout.Companion.ORDER_SIGN_UP_STATE
+import com.example.aad_team_35_animation_challenge.auth.fragments.SignInFragment
+import com.example.aad_team_35_animation_challenge.auth.fragments.SignUpFragment
 import com.example.aad_team_35_animation_challenge.auth.listeners.OnAuthListener
+import com.example.aad_team_35_animation_challenge.auth.listeners.OnButtonSwitchedListener
+import com.example.aad_team_35_animation_challenge.databinding.ActivityAuthBinding
 import com.google.android.material.snackbar.Snackbar
 
 class AuthActivity : AppCompatActivity(), OnAuthListener {
@@ -55,6 +53,15 @@ class AuthActivity : AppCompatActivity(), OnAuthListener {
         })
 
         mBinding!!.signInFragment.visibility = INVISIBLE
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val preferences = PreferenceManager.getDefaultSharedPreferences(this)
+
+        if (preferences.getBoolean(getString(R.string.user_logged_in), false))
+            onSuccess()
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
@@ -106,7 +113,7 @@ class AuthActivity : AppCompatActivity(), OnAuthListener {
         //  TODO: Uncomment the code below and replace the SplashScreenActivity with
         //   the appropriate activity
 
-//        startActivity(Intent(this, SplashScreenActivity::class.java))
+        startActivity(Intent(this, HomeActivity::class.java))
 
         finish()
     }

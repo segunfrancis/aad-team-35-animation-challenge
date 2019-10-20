@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.example.aad_team_35_animation_challenge.auth.AuthActivity;
+import com.example.aad_team_35_animation_challenge.onboarding.OnBoardingActivity;
 
 
 public class SplashScreenActivity extends AppCompatActivity {
@@ -20,7 +21,7 @@ public class SplashScreenActivity extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(
-                        new Intent(SplashScreenActivity.this, AuthActivity.class)
+                        new Intent(SplashScreenActivity.this, OnBoardingActivity.class)
                 );
 
                 finish();
