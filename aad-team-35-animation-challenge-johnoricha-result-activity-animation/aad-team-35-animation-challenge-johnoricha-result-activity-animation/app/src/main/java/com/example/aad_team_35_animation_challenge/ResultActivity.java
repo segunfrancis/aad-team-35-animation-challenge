@@ -2,6 +2,7 @@ package com.example.aad_team_35_animation_challenge;
 
         import androidx.appcompat.app.AppCompatActivity;
 
+        import android.content.Intent;
         import android.os.Bundle;
         import android.view.View;
         import android.view.View.OnClickListener;
@@ -30,6 +31,7 @@ public class ResultActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Animation animation = AnimationUtils.loadAnimation(ResultActivity.this, R.anim.fadein);
                 button.startAnimation(animation);
+
             }
         });
 
