@@ -2,6 +2,7 @@ package com.example.aad_team_35_animation_challenge.auth
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
+import android.content.Intent
 import android.os.Bundle
 import android.preference.PreferenceManager
 import android.view.View
@@ -9,6 +10,7 @@ import android.view.View.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import com.example.aad_team_35_animation_challenge.HomeActivity
 import com.example.aad_team_35_animation_challenge.R
 import com.example.aad_team_35_animation_challenge.auth.customs.FlexibleLayout.Companion.ORDER_SIGN_IN_STATE
 import com.example.aad_team_35_animation_challenge.auth.customs.FlexibleLayout.Companion.ORDER_SIGN_UP_STATE
@@ -111,7 +113,7 @@ class AuthActivity : AppCompatActivity(), OnAuthListener {
         //  TODO: Uncomment the code below and replace the SplashScreenActivity with
         //   the appropriate activity
 
-//        startActivity(Intent(this, SplashScreenActivity::class.java))
+        startActivity(Intent(this, HomeActivity::class.java))
 
         finish()
     }

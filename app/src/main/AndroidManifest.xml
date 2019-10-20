@@ -12,6 +12,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
+            android:name=".HomeActivity"/>
+        <activity
             android:name=".auth.AuthActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashScreenActivity">
