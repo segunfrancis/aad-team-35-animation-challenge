@@ -19,5 +19,11 @@
     <string name="empty_string"></string>
     <string name="invalid_credentials">Invalid credentials</string>
     <string name="error_invalid_address">Invalid email address</string>
+    <string name="logout">Logout</string>
     <string name="user_logged_in">user_logged_in</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="desc_one">Welcome to Quizomatic, An educatice quiz app that tests your Andela Knowledge!</string>
+    <string name="desc_two">Think you know Andela? Jump in and test your knowledge!</string>
 </resources>
