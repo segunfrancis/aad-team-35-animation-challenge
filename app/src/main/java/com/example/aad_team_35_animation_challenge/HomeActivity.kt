@@ -1,12 +1,14 @@
 package com.example.aad_team_35_animation_challenge
 
 import android.animation.AnimatorInflater
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.view.animation.BounceInterpolator
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import com.example.aad_team_35_animation_challenge.app.QuizMoApp.Companion.logout
 import com.example.aad_team_35_animation_challenge.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -28,6 +30,18 @@ class HomeActivity : AppCompatActivity() {
             interpolate(mBinding!!.viewScores)
             //startActivity(Intent(this@HomeActivity, ViewScoresActivity::class.java))
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.logout_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.logout -> logout(this)
+        }
+        return true
     }
 
     private fun scaleAnimation(view: View) {
