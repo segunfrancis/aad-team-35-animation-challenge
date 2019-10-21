@@ -4,6 +4,7 @@
     package="com.example.aad_team_35_animation_challenge">
 
     <application
+        android:name=".app.QuizMoApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,18 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".onboarding.OnBoardingActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
-        <activity android:name=".ActivityHavingLogoutMenu" />
-
         <activity
-            android:name=".HomeActivity"/>
+            android:name=".onboarding.OnBoardingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".auth.AuthActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SplashScreenActivity"
+        <activity
+            android:name=".SplashScreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
