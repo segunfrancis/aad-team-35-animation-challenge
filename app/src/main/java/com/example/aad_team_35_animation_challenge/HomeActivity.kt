@@ -1,6 +1,5 @@
 package com.example.aad_team_35_animation_challenge
 
-import android.animation.AnimatorInflater
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -9,6 +8,7 @@ import android.view.animation.BounceInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.aad_team_35_animation_challenge.app.QuizMoApp.Companion.logout
+import com.example.aad_team_35_animation_challenge.app.QuizMoApp.Companion.animate
 import com.example.aad_team_35_animation_challenge.databinding.ActivityHomeBinding
 
 class HomeActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
 
-        scaleAnimation(mBinding!!.homeImage)
+        animate(mBinding!!.homeImage, R.animator.scale_animation)
 
         mBinding!!.takeQuiz.setOnClickListener {
             interpolate(mBinding!!.takeQuiz)
@@ -42,15 +42,6 @@ class HomeActivity : AppCompatActivity() {
             R.id.logout -> logout(this)
         }
         return true
-    }
-
-    private fun scaleAnimation(view: View) {
-        val scale = AnimatorInflater.loadAnimator(view.context, R.animator.scale_animation)
-        scale.apply {
-            setTarget(view)
-            interpolator = BounceInterpolator()
-            start()
-        }
     }
 
     private fun interpolate(view: View) {
