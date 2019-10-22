@@ -77,7 +77,7 @@ public class OnboardingFragmentTwo extends Fragment {
     }
 
     private void startImageAnim() {
-        Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.image_anim);
+        Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.bounce_bulb);
         Animation animation1 = AnimationUtils.loadAnimation(getActivity(), R.anim.image_anim);
         bulb.startAnimation(animation);
 
