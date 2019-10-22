@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
 
         mBinding!!.takeQuiz.setOnClickListener {
             interpolate(mBinding!!.takeQuiz)
-            //startActivity(Intent(this@HomeActivity, TakeQuizActivity::class.java))
+            startActivity(Intent(this@HomeActivity, TakeQuizActivity::class.java))
         }
 
         mBinding!!.viewScores.setOnClickListener {
