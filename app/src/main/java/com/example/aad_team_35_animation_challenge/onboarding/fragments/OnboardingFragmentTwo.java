@@ -52,6 +52,7 @@ public class OnboardingFragmentTwo extends Fragment {
                 Intent intent = new Intent(getActivity(), AuthActivity.class);
                 startActivity(intent);
 
+                getActivity().finish();
             }
         });
 
