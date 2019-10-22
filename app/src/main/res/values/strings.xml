@@ -27,4 +27,5 @@
     <string name="desc_one">Welcome to Quizomatic, An educatice quiz app that tests your Andela Knowledge!</string>
     <string name="desc_two">Think you know Andela? Jump in and test your knowledge!</string>
     <string name="submit">submit</string>
+    <string name="splash_image">Splash Image</string>
 </resources>

@@ -11,6 +11,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.VISIBLE
 import android.view.ViewGroup
+import android.widget.Toast
 
 import com.example.aad_team_35_animation_challenge.R
 import com.example.aad_team_35_animation_challenge.auth.AuthActivity
@@ -37,8 +38,8 @@ class SignInFragment : Fragment(), OnSignInListener {
 
 
     override fun signIn() {
-        val email = mBinding.edtEmail.text.toString()
-        val password = mBinding.edtPassword.toString()
+        val email = mBinding.edtEmail.text.toString().trim()
+        val password = mBinding.edtPassword.text.toString()
 
         if (email.isNotEmpty() && password.isNotEmpty()) {
             val authActivity = activity as AuthActivity

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ViewScoresActivity">
+
+    <TextView
+        android:id="@+id/txt_subject4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="Physics"
+        android:textAlignment="textStart"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txt_subject3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_subject3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_subject3"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <TextView
+        android:id="@+id/txt_subject3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="Andela History"
+        android:textAlignment="viewStart"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_subject2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_subject2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_subject2" />
+
+    <TextView
+        android:id="@+id/txt_date4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="14/09/19:-"
+        android:textAlignment="center"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txt_date3"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt_date3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="14/09/19:-"
+        android:textAlignment="center"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txt_date2"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date2" />
+
+    <TextView
+        android:id="@+id/txt_subject2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="Andela History"
+        android:textAlignment="center"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txt_subject1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txt_subject1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_subject1" />
+
+    <TextView
+        android:id="@+id/txt_date2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="19/08/19:-"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/txt_date1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_date1" />
+
+    <ImageView
+    android:id="@+id/imageView7"
+    android:layout_width="87dp"
+    android:layout_height="46dp"
+    android:layout_marginTop="4dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/lightbulb1"
+    tools:srcCompat="@drawable/lightbulb1" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="291dp"
+        android:layout_height="219dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:srcCompat="@drawable/illustration_with_man"
+        tools:srcCompat="@drawable/illustration_with_man" />
+
+    <TextView
+        android:id="@+id/txt_result_viewscores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="SCORES"
+        android:textColor="#F20C0C0C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <TextView
+        android:id="@+id/txt_date1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="12/08/19:-"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/txt_result_viewscores" />
+
+    <TextView
+        android:id="@+id/txt_subject1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/pt_sans_caption_bold"
+        android:text="Stories &amp; Metaphors"
+        android:textAlignment="viewStart"
+        android:textColor="#F20C0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
+        app:layout_constraintStart_toEndOf="@+id/txt_date1"
+        app:layout_constraintTop_toBottomOf="@+id/txt_result_viewscores" /><![CDATA[
+
+    />
+]]>
+</androidx.constraintlayout.widget.ConstraintLayout>
