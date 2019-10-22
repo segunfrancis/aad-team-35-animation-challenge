@@ -11,4 +11,7 @@
     <color name="yellow">#CECE00</color>
     <color name="gray">#1F1F1F</color>
     <color name="secondPage">#00838F</color>
+    <color name="failColor">#ef5350</color>
+    <color name="correctColor">#76ff03</color>
+    <color name="defaultBackgroundColor">#F5F5F5</color>
 </resources>
