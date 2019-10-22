@@ -14,14 +14,14 @@ import com.example.aad_team_35_animation_challenge.onboarding.OnBoardingActivity
 
 
 public class SplashScreenActivity extends AppCompatActivity {
-    ImageView imageView;
+   // ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        imageView = findViewById(R.id.splashImage);
-        startAnim();
+       // imageView = findViewById(R.id.splashImage);
+       // startAnim();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -35,10 +35,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         }, 1500);
     }
 
-    private void startAnim() {
-        Animation animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.onboard_anim);
-        imageView.startAnimation(animation);
+  //  private void startAnim() {
+    //    Animation animation = AnimationUtils.loadAnimation(getBaseContext(), R.anim.onboard_anim);
+      //  imageView.startAnimation(animation);
 
 
-    }
+    //}
 }
