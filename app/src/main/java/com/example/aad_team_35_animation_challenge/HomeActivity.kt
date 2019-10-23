@@ -1,5 +1,6 @@
 package com.example.aad_team_35_animation_challenge
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,6 +11,7 @@ import androidx.databinding.DataBindingUtil
 import com.example.aad_team_35_animation_challenge.app.QuizMoApp.Companion.logout
 import com.example.aad_team_35_animation_challenge.app.QuizMoApp.Companion.animate
 import com.example.aad_team_35_animation_challenge.databinding.ActivityHomeBinding
+import com.example.aad_team_35_animation_challenge.result.ViewScoresActivity
 
 class HomeActivity : AppCompatActivity() {
 
@@ -23,12 +25,12 @@ class HomeActivity : AppCompatActivity() {
 
         mBinding!!.takeQuiz.setOnClickListener {
             interpolate(mBinding!!.takeQuiz)
-            //startActivity(Intent(this@HomeActivity, TakeQuizActivity::class.java))
+            startActivity(Intent(this@HomeActivity, TakeQuizActivity::class.java))
         }
 
         mBinding!!.viewScores.setOnClickListener {
             interpolate(mBinding!!.viewScores)
-            //startActivity(Intent(this@HomeActivity, ViewScoresActivity::class.java))
+            startActivity(Intent(this@HomeActivity, ViewScoresActivity::class.java))
         }
     }
 
